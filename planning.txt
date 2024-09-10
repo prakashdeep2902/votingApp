@@ -1,0 +1,42 @@
+What i am making 
+
+A voting app where users can give there vote to  selected candidate;
+
+
+functionality
+
+1:users can signup/login
+2:users can see the profile of candidate
+3:users can see the list of candidate
+4:vote one of the candidate, after that users can't vote 
+5:live vote count of candidate 
+6.users can sign up using the aadhar number
+7.admin can add ,delete, and update the list of candidate and he/she can't able to vote;
+8.admin can't vote 
+
+
+---------------------------------------------------------------------------------------------------
+
+Routes:
+
+
+Admin Authentication:
+1:Admin/signup:POST=>using this API creating the Admin account in our app;[name + phonenumber + email + addharId + password]
+2:voter/login:Post=>Voter can login on our app giving  there aadhar number and password [phonenumber + addharId];
+
+User Authentication:
+1:voter/signup:POST=>using this API creating the voter account in our app;
+2:voter/login:Post=>Voter can login on our app giving  there aadhar number and password;
+
+Voting:
+1:/candidate:GET=>using this API route will show the candidate list to th users
+2:/candidate/Id:POST=>using this API user can give there vote to particular candidate;
+
+Voter profile:
+1:voter/profile:GET=>voter can see there profile 
+2:voter/profile/addharId/:Put/delete=>voter can do updates in there profile and delete from db as well
+
+Admin candidate Management:
+
+admin/candidate/create:POST=> only admin can create the candidate profile
+admin/candidate/delete||update:delete|| update=>admin can delete and update of candidate                                          
